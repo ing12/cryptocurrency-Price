@@ -1,77 +1,59 @@
-# React + TypeScript + Vite
+# 💰 Crypto Price
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicación web desarrollada con React y TypeScript que permite consultar el precio actualizado de las principales criptomonedas utilizando la API pública de CoinGecko.
 
-Currently, two official plugins are available:
+El usuario puede seleccionar una criptomoneda y una divisa (USD, MXN, EUR, entre otras) para visualizar información relevante como el precio actual, máximos y mínimos de las últimas 24 horas, la variación del precio y la fecha de la última actualización.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Demo
 
-## React Compiler
+https://ing12.github.io/cryptocurrency-Price/
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+## ✨ Características
 
-Note: This will impact Vite dev & build performances.
+- Consulta de las principales criptomonedas por capitalización de mercado.
+- Selección de criptomoneda y moneda de cotización.
+- Precio actualizado en tiempo real.
+- Precio máximo y mínimo de las últimas 24 horas.
+- Variación del precio en las últimas 24 horas.
+- Fecha de la última actualización.
+- Indicador de carga (Spinner).
+- Validación de respuestas de la API mediante Zod.
+- Manejo de estado global con Zustand.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🛠️ Tecnologías utilizadas
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- React
+- TypeScript
+- Vite
+- Zustand
+- Axios
+- Zod
+- CSS3
+- CoinGecko API
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 🌐 API utilizada
 
-```
+La información de las criptomonedas se obtiene desde:
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+https://www.coingecko.com/en/api
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 📚 Conceptos aplicados
 
-```
+Durante el desarrollo de este proyecto se implementaron conceptos como:
+
+- Componentes funcionales de React
+- Hooks (`useMemo`)
+- Estado global con Zustand
+- Consumo de APIs REST con Axios
+- Validación de datos con Zod
+- Helpers reutilizables
+- Tipado estático con TypeScript
+- Organización por capas (Components, Services, Store, Helpers y Types)
+
+---
